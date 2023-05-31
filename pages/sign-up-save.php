@@ -57,7 +57,7 @@ if (empty($terms)) {
 // Ямар ч алдаагүй бол базд бүртгэнэ
 if (sizeof($errors) == 0) {
     $success = _exec(
-        "insert into users set name=?, pass=?, phone=?, email=?",
+        "insert into users set name=?, password=?, phone=?, email=?",
         'ssss',
         [$username, $userpassword, $phone, $email],
         $count

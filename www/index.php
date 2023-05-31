@@ -8,7 +8,8 @@ require ROOT . '/inc/db.php';
 $page = @$_SERVER['REDIRECT_URL'];
 
 if (empty($page)) {
-    require ROOT . '/pages/user/home.php';
+require ROOT . '/pages/sign-in.php';
+
 } else {
     $script = ROOT . "/pages$page.php";
     if (file_exists($script)) {

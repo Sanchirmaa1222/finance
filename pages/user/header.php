@@ -21,6 +21,11 @@ if ($_SESSION['type'] !== 'user') {
     <!-- App favicon -->
     <link rel="shortcut icon" href="/assets/images/favicon.ico">
 
+    <link href="/assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="/assets/libs/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+
     <!-- Bootstrap Css -->
     <link href="/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -35,7 +40,7 @@ if ($_SESSION['type'] !== 'user') {
     <!-- Begin page -->
     <div id="layout-wrapper">
 
-        <header id="page-topbar">
+        <header id="page-topbar" style="z-index:900">
             <div class="navbar-header">
                 <div class="d-flex">
                     <!-- LOGO -->
@@ -249,9 +254,3 @@ if ($_SESSION['type'] !== 'user') {
         <div class="main-content">
 
             <div class="page-content">
-                <div class="container-fluid">
-
-                    <!-- start page title -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box d-flex align-items-center justify-content-between">
