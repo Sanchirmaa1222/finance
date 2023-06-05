@@ -24,10 +24,10 @@ if (sizeof($errors) > 0) {
 // Базаас ийм утас нууц үгтэй хүний мэдээллийг татна
 _selectRow(
     $stmt, $count,
-    "select name, email, phone from users where phone=? and password=?",
+    "select id, name, email, phone from users where phone=? and password=?",
     'ss',
     [$phone, $password],
-    $name, $email, $phone
+    $id, $name, $email, $phone
 );
 
 /* Хэрэв мэдээлэл ирсэн байвал
@@ -36,6 +36,8 @@ _selectRow(
 3) home хуудас руу үсэргэнэ
  */
 if (!empty($name)) {
+$_SESSION['id'] = $id;
+
     $_SESSION['name'] = $name;
     $_SESSION['phone'] = $phone;
     $_SESSION['email'] = $email;

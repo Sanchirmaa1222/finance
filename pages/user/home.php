@@ -52,47 +52,49 @@ th {
                         <tbody>
                             <form action="/user/record/new" method="post">
                                 <tr>
-                                    <th scope="row" class="px-0 pl-1">1</th>
-                                    <td class="px-0 pr-1"><input type="text" class="form-control form-control-sm"
-                                            id="datepicker">
+                                    <th scope="row" class="px-0 pl-1"></th>
+                                    <td class="px-0 pr-1"><input name="ognoo" value="2023-06-03" type="text"
+                                            class="form-control form-control-sm" style="width:100px" id="datepicker">
                                     </td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm"
-                                            style="width: 250px;" type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="utga" value="zaragaas huwtsas awsan"
+                                            class="form-control form-control-sm" style="width: 250px;" type="text"
+                                            placeholder=""></td>
                                     <td class="px-0 pr-1">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck02"
-                                                data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                            <input name="togtmol" type="checkbox" class="custom-control-input"
+                                                id="customCheck02" data-parsley-multiple="groups"
+                                                data-parsley-mincheck="2">
                                             <label class="custom-control-label" for="customCheck02"></label>
                                         </div>
                                     </td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
-                                    <td class="px-0 pr-1"><input class="form-control form-control-sm" type="text"
-                                            placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="turul" value="huwtsas"
+                                            class="form-control form-control-sm" type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="hariltsagch" class="form-control form-control-sm"
+                                            type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="mungu_usuh" class="form-control form-control-sm"
+                                            type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="mungu_buurah"
+                                            class="form-control form-control-sm" type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="hurungu_usuh"
+                                            class="form-control form-control-sm" type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="hurungu_buurah"
+                                            class="form-control form-control-sm" type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="baraa_usuh" class="form-control form-control-sm"
+                                            type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="baraa_buurah"
+                                            class="form-control form-control-sm" type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="awlaga_usuh" class="form-control form-control-sm"
+                                            type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="awlaga_buurah"
+                                            class="form-control form-control-sm" type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="ur_usuh" class="form-control form-control-sm"
+                                            type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="ur_buurah" class="form-control form-control-sm"
+                                            type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="orlogo" class="form-control form-control-sm"
+                                            type="text" placeholder=""></td>
+                                    <td class="px-0 pr-1"><input name="zardal" value="50000"
+                                            class="form-control form-control-sm" type="text" placeholder=""></td>
                                     <td>
                                         <button type="submit" class="btn btn-instagram ml-1 btn-sm">
                                             <i class="ti-save mr-1 font-10"></i>
@@ -100,58 +102,47 @@ th {
                                     </td>
                                 </tr>
                             </form>
+                            <?php
+_selectAll($stmt, $count, "select id, ognoo, utga, togtmol, turul, hariltsagch, mungu_usuh, mungu_buurah,
+                            hurungu_usuh, hurungu_buurah, baraa_usuh, baraa_buurah, awlaga_usuh, awlaga_buurah, ur_usuh, ur_buurah,
+                            orlogo, zardal from transaction", $id, $ognoo, $utga, $togtmol, $turul, $hariltsagch, $mungu_usuh, $mungu_buurah,
+    $hurungu_usuh, $hurungu_buurah, $baraa_usuh, $baraa_buurah, $awlaga_usuh, $awlaga_buurah, $ur_usuh, $ur_buurah,
+    $orlogo, $zardal);
+
+                            while(_fetch($stmt)):
+                            ?>
+
                             <tr>
                                 <th scope="row" class="px-0 pl-1">1</th>
-                                <td class="px-0 pr-1">07/01</td>
-                                <td class="px-0 pr-1">Төрсөн өдрөөр хоолонд оров</td>
+                                <td class="px-0 pr-1"><?=$ognoo?></td>
+                                <td class="px-0 pr-1"><?=$utga?></td>
                                 <td class="px-0 pr-1">
-
+                                    <?php if(!empty($togtmol)): ?>
+                                    <div class="custom-control custom-checkbox ">
+                                        <input name="togtmol" type="checkbox" checked class="custom-control-input"
+                                            id="customCheck02" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                        <label class="custom-control-label" for="customCheck02"></label>
+                                    </div>
+                                    <?php endif?>
                                 </td>
-                                <td>хоол</td>
-                                <td>гэрбүл</td>
-                                <td></td>
-                                <td class="table-danger">69,000</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td class="table-danger">69,000</td>
+                                <td><?=$turul?></td>
+                                <td><?=$hariltsagch?></td>
+                                <td><?=$mungu_usuh?></td>
+                                <td class="table-danger"><?=$mungu_buurah?></td>
+                                <td><?=$hurungu_usuh?></td>
+                                <td><?=$hurungu_buurah?></td>
+                                <td><?=$baraa_usuh?></td>
+                                <td><?=$baraa_buurah?></td>
+                                <td><?=$awlaga_usuh?></td>
+                                <td><?=$awlaga_buurah?></td>
+                                <td><?=$ur_usuh?></td>
+                                <td><?=$ur_buurah?></td>
+                                <td><?=$orlogo?></td>
+                                <td class="table-danger"><?=$zardal?></td>
                                 <td class="pt-3"><i class=" dripicons-document-edit mr-1"></i><i
                                         class="ti-trash mr-1"></i></td>
                             </tr>
-
-                            <tr>
-                                <th scope="row" class="px-0 pl-1 pr-2">1</th>
-                                <td class="px-0 pr-1">07/01</td>
-                                <td class="px-0 pr-1">Цалин Өсөхөө сарын сүүл</td>
-                                <td class="px-0 pr-1">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck02"
-                                            data-parsley-multiple="groups" data-parsley-mincheck="2" checked>
-                                        <label class="custom-control-label" for="customCheck02"></label>
-                                    </div>
-                                </td>
-                                <td>цалин</td>
-                                <td>өсөхөө</td>
-                                <td class="table-success">750,000</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td class="table-success">750,000</td>
-                                <td></td>
-                                <td><i class=" dripicons-document-edit mr-1"></i><i class="ti-trash mr-1"></i></td>
-                            </tr>
+                            <?php endwhile;?>
                         </tbody>
                     </table>
                 </div>
